@@ -1,0 +1,57 @@
+<!--
+File: index.html
+GUI Assignment: Javascript Multiplication Table
+Author: Al Sebastian Ferreras
+Date: 11/17/21
+Description: Take user input and make a multiplication table 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+        <script type="text/javascript" src="https://releases.jquery.com/git/ui/jquery-ui-git.js"></script>
+        <link rel="stylesheet" href="./css/stylesheet.css">
+        <link type='text/css' rel='stylesheet' href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter number range between -50 and 50</legend>
+            <form id="xyForm">
+                <label for="miny">Minimum Row</label>
+                <input type="text" id="miny" name="miny">
+                <div id="minySlider"></div>
+                <label for="maxy">Maximum Row</label>
+                <input type="text" id="maxy" name="maxy">
+                <div id="maxySlider"></div>
+                <label for="minx">Minimum Column</label>
+                <input type="text" id="minx" name="minx">
+                <div id="minxSlider"></div>
+                <label for="maxx">Maximum Column</label>
+                <input type="text" id="maxx" name="maxx">
+                <div id="maxxSlider"></div>
+                <input id='button' type="submit" value="generate">
+                <input id='saveTab' type="button" value="Save Table">
+                <!--Where the error message will go-->
+                <p id='error'></p>
+            </form>
+        </fieldset>
+        
+        <!--Where the table will go-->
+        <div id="tableZone">
+        </div>
+        
+        <div id='tabs'>
+            <input id='delTab' type='button' value='Delete Selected'>
+            <ul></ul>
+        </div>
+          
+        <script src="./js/validate.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/sliders.js"></script>
+        <script src="./js/tabs.js"></script>
+    </body>
+</html>
